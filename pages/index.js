@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import posts from '../posts/posts.json'
 
 export default function Home() {
@@ -17,9 +18,9 @@ export default function Home() {
         <ul className='mx-auto'>
           {posts.map((item) => (
             <li key={item.id} className="border-b py-10">
-              <a href={item.link}>
+              <Link href={item.link}>
                 <h2 className='text-3xl font-bold text-gray-700 hover:underline decoration-gray-600'>{`${item.title}`}</h2>
-              </a>
+              </Link>
               <p className='text-lg text-gray-500'>{item.description}</p>
             </li>
           ))}

@@ -1,4 +1,5 @@
 import Head from "next/head"
+import Link from "next/link"
 import { getBlogPostData, getAllBlogPostIds } from '../../lib/blog'
 
 export async function getStaticPaths() {
@@ -27,7 +28,7 @@ export default function DetailPost({ postData }) {
       <div className="py-8">
         <article className="px-4">
           <div className="prose prose-sky lg:prose-lg  mx-auto">
-            <a href="/" className="py-6 inline-block">Home</a>
+            <Link href="/" className="py-6 inline-block">Home</Link>
             <h1 className="text-5xl font-bold">
               {postData.title}
             </h1>
